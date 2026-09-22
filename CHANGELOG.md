@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.0 — 2026-09-23
+
+### Added
+- Packaged the repository as a Claude Code plugin (`.claude-plugin/plugin.json`).
+- Added 11 `/lgmds-*` slash commands, one per `references/` module, so each topic can be invoked directly instead of only through natural-language routing.
+- Documented the commands and their target modules in the README.
+
+### Fixed
+- Replaced the unresolved `OWNER` placeholder in the README install commands with the actual repository owner.
+
 ## 1.1.0 — 2026-09-22
 
 ### Changed

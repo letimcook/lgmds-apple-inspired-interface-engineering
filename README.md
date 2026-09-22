@@ -56,22 +56,24 @@ npx skills add ./lgmds-apple-inspired-interface-engineering
 ## Using it with coding agents
 `SKILL.md` is intentionally short: it states the mission, the evidence rule, and a routing table that points to the relevant `references/*.md` module for a given task (materials, motion, navigation, brand animation, SwiftUI, web, animation runtimes, design tokens, accessibility/QA). A coding agent should read `SKILL.md` first, then load only the reference files relevant to the current task, rather than loading the whole repository at once.
 
-## Reference routing (topics the skill can load)
-There is no slash-command interface — the skill is triggered by natural-language intent, and `SKILL.md` then routes the agent to load only the module(s) below that match the task at hand:
+## Slash commands (Claude Code plugin)
+This repository also ships as a Claude Code plugin, so each module can be invoked directly with `/lgmds-*` instead of relying on the agent to route by natural language every time. Install it as a plugin (e.g. via `/plugin marketplace add letimcook/lgmds-apple-inspired-interface-engineering` or your marketplace's equivalent add-repo flow), then use:
 
-| Topic | Module |
-|---|---|
-| Apple/HIG conventions, safe areas | `references/apple-interface.md` |
-| SwiftUI, native Liquid Glass implementation | `references/swiftui-native.md` |
-| Liquid Glass vs. Glassmorphism material choice | `references/material-systems.md` |
-| Motion physics, timing, easing, springs | `references/motion-engineering.md` |
-| Tab bars, persistent selector, navigation continuity | `references/navigation-motion.md` |
-| Logo, brand and splash animation | `references/brand-motion.md` |
-| HTML/CSS/JS, GSAP, SVG, WebGL glass | `references/web-motion.md` |
-| Lottie/Rive/native runtime selection | `references/animation-runtimes.md` |
-| Design tokens, component consistency | `references/design-system.md` |
-| Accessibility, snapshot and visual QA | `references/accessibility-qa.md` |
-| Source provenance and licensing | `sources/SOURCE_REGISTRY.md` |
+| Command | Loads | Use for |
+|---|---|---|
+| `/lgmds-apple` | `references/apple-interface.md` | Apple/HIG conventions, safe areas |
+| `/lgmds-swiftui` | `references/swiftui-native.md` | SwiftUI, native Liquid Glass implementation |
+| `/lgmds-material` | `references/material-systems.md` | Liquid Glass vs. Glassmorphism material choice |
+| `/lgmds-motion` | `references/motion-engineering.md` | Motion physics, timing, easing, springs |
+| `/lgmds-navigation` | `references/navigation-motion.md` | Tab bars, persistent selector, navigation continuity |
+| `/lgmds-brand` | `references/brand-motion.md` | Logo, brand and splash animation |
+| `/lgmds-web` | `references/web-motion.md` | HTML/CSS/JS, GSAP, SVG, WebGL glass |
+| `/lgmds-runtimes` | `references/animation-runtimes.md` | Lottie/Rive/native runtime selection |
+| `/lgmds-design-system` | `references/design-system.md` | Design tokens, component consistency |
+| `/lgmds-accessibility` | `references/accessibility-qa.md` | Accessibility, snapshot and visual QA |
+| `/lgmds-sources` | `sources/SOURCE_REGISTRY.md` | Source provenance and licensing |
+
+Each command takes a free-text argument describing the component/screen/task, e.g. `/lgmds-motion the CTA button press and release`. If your agent CLI does not support Claude Code-style plugin commands, install the skill only (above) — `SKILL.md`'s routing table still directs it to the same modules from natural-language intent.
 
 ## Source policy
 The skill is synthesis, not a dump of third-party repositories. See `sources/SOURCE_REGISTRY.md` for inspected sources, pinned research commits, roles, licenses and adoption status, and `sources/LICENSE_POLICY.md` for what each adoption category means in practice.
