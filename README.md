@@ -57,7 +57,7 @@ npx skills add ./lgmds-apple-inspired-interface-engineering
 `SKILL.md` is intentionally short: it states the mission, the evidence rule, and a routing table that points to the relevant `references/*.md` module for a given task (materials, motion, navigation, brand animation, SwiftUI, web, animation runtimes, design tokens, accessibility/QA). A coding agent should read `SKILL.md` first, then load only the reference files relevant to the current task, rather than loading the whole repository at once.
 
 ## Slash commands (Claude Code plugin)
-This repository also ships as a Claude Code plugin, so each module can be invoked directly with `/lgmds-*` instead of relying on the agent to route by natural language every time. Install it as a plugin (e.g. via `/plugin marketplace add letimcook/lgmds-apple-inspired-interface-engineering` or your marketplace's equivalent add-repo flow), then use:
+This repository also ships as a Claude Code plugin, so each module can be invoked directly with `/lgmds-*` instead of relying on the agent to route by natural language every time. Install it as a plugin (e.g. via `/plugin marketplace add letimcook/lgmds-apple-inspired-interface-engineering`, or by cloning/copying this folder into `~/.claude/skills/lgmds-apple-inspired-interface-engineering` for a skills-dir install), then **restart your Claude Code session** — plugin and command registration is read at session start, so commands added or installed mid-session will not appear until you exit and reopen the CLI. After restarting, use:
 
 | Command | Loads | Use for |
 |---|---|---|
