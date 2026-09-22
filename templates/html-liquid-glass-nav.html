@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Persistent Material Tab Bar</title>
+<style>
+:root{--tabs:4;--accent:#1677ff;--bar-h:68px;--pad:6px}
+*{box-sizing:border-box} body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,sans-serif;background:linear-gradient(180deg,#eef5ff,#fff);color:#111}
+.demo{min-height:100vh;padding:32px 20px 120px}
+.tabbar{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);width:min(390px,calc(100vw - 24px));height:var(--bar-h);padding:var(--pad);display:grid;grid-template-columns:repeat(var(--tabs),1fr);border:1px solid rgba(255,255,255,.55);border-radius:26px;background:rgba(255,255,255,.42);backdrop-filter:blur(24px) saturate(145%);-webkit-backdrop-filter:blur(24px) saturate(145%);box-shadow:0 18px 45px rgba(20,35,65,.16),inset 0 1px rgba(255,255,255,.7);isolation:isolate}
+.lens{position:absolute;z-index:-1;top:var(--pad);left:var(--pad);height:calc(100% - 2*var(--pad));width:calc((100% - 2*var(--pad))/var(--tabs));border-radius:21px;background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(255,255,255,.54));box-shadow:0 8px 22px rgba(34,91,180,.16),inset 0 1px 0 rgba(255,255,255,.95);transform:translateX(calc(var(--i,0)*100%)) scaleX(var(--sx,1));transform-origin:var(--origin,center);transition:transform 420ms cubic-bezier(.22,1,.36,1),box-shadow 220ms ease}
+.tab{border:0;background:transparent;font:inherit;color:rgba(20,25,35,.58);display:grid;place-items:center;gap:2px;cursor:pointer}.tab strong{font-size:12px}.tab.active{color:var(--accent)}
+@media(prefers-reduced-motion:reduce){.lens{transition-duration:120ms;--sx:1!important}.tab{transition:none}}
+</style>
+</head>
+<body>
+<main class="demo"><h1>Persistent material selector</h1><p>The lens is one DOM object. It travels; it is not recreated inside each tab.</p></main>
+<nav class="tabbar" aria-label="Primary"><span class="lens" aria-hidden="true"></span>
+<button class="tab active" data-i="0">◉<strong>Home</strong></button><button class="tab" data-i="1">◇<strong>Explore</strong></button><button class="tab" data-i="2">▣<strong>Reports</strong></button><button class="tab" data-i="3">⚙<strong>Settings</strong></button>
+</nav>
+<script>
+const bar=document.querySelector('.tabbar'), lens=document.querySelector('.lens'); let current=0, timer;
+bar.addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;const next=+b.dataset.i;if(next===current)return;const dir=Math.sign(next-current);const distance=Math.abs(next-current);bar.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===b));lens.style.setProperty('--origin',dir>0?'left':'right');lens.style.setProperty('--sx',String(1+Math.min(.55,.16*distance)));lens.style.setProperty('--i',String(next));clearTimeout(timer);timer=setTimeout(()=>lens.style.setProperty('--sx','1'),180);current=next;});
+</script>
+</body></html>

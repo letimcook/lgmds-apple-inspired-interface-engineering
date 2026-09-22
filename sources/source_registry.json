@@ -1,0 +1,168 @@
+{
+  "snapshot_date": "2026-09-22",
+  "pack_version": "1.0.0",
+  "sources": [
+    {
+      "repo": "Prisma-Labs-Dev/apple-skills",
+      "commit": "ccc8976b6d734a0c912ba758a950b2bf33425d1d",
+      "role": "Apple platform/HIG/Liquid Glass reference; includes Apple-DocC-derived material",
+      "license": "MIT",
+      "status": "PRODUCTION REFERENCE",
+      "use": "Native iOS rules, HIG routing, glassEffect/GlassEffectContainer reference",
+      "url": "https://github.com/Prisma-Labs-Dev/apple-skills"
+    },
+    {
+      "repo": "twostraws/SwiftUI-Agent-Skill",
+      "commit": "be297ff80dddec529af1f9b1f1f114aab6c9d11c",
+      "role": "Modern SwiftUI agent guidance",
+      "license": "MIT",
+      "status": "PRODUCTION REFERENCE",
+      "use": "SwiftUI API usage, design, performance, accessibility review",
+      "url": "https://github.com/twostraws/SwiftUI-Agent-Skill"
+    },
+    {
+      "repo": "AvdLee/SwiftUI-Agent-Skill",
+      "commit": "b24e68a965dc4b5bd2cc41dc60c094a26a9379ce",
+      "role": "SwiftUI expert guidance incl. Liquid Glass and current APIs",
+      "license": "MIT",
+      "status": "PRODUCTION REFERENCE",
+      "use": "SwiftUI composition, performance, Liquid Glass fallbacks/current APIs",
+      "url": "https://github.com/AvdLee/SwiftUI-Agent-Skill"
+    },
+    {
+      "repo": "conorluddy/LiquidGlassReference",
+      "commit": "b3312351da9faca5c8d3f771c6c90fc707420ad6",
+      "role": "Deep Liquid Glass reference",
+      "license": "No license file verified",
+      "status": "REFERENCE ONLY",
+      "use": "Concepts such as lensing, fluidity, morphing, navigation-layer use",
+      "url": "https://github.com/conorluddy/LiquidGlassReference"
+    },
+    {
+      "repo": "GonzaloFuentes28/LiquidGlassCheatsheet",
+      "commit": "415c5e4b88c52fc49122e0e34fe23f8140ee66ca",
+      "role": "SwiftUI Liquid Glass examples/cheatsheet",
+      "license": "MIT",
+      "status": "PRODUCTION REFERENCE",
+      "use": "glassEffect variants, interactive glass, glass button patterns",
+      "url": "https://github.com/GonzaloFuentes28/LiquidGlassCheatsheet"
+    },
+    {
+      "repo": "mertozseven/LiquidGlassSwiftUI",
+      "commit": "6e1caf2463b04bf9c88e739848f83aae99a0b55f",
+      "role": "Small native sample with GlassEffectContainer and transitions",
+      "license": "No license file verified",
+      "status": "REFERENCE ONLY",
+      "use": "glassEffectID, namespace continuity, symbol replacement patterns",
+      "url": "https://github.com/mertozseven/LiquidGlassSwiftUI"
+    },
+    {
+      "repo": "exyte/AnimatedTabBar",
+      "commit": "dcc003243f1fddc019564b08431cf508358f7d58",
+      "role": "Pure SwiftUI animated tab bar",
+      "license": "MIT",
+      "status": "PRODUCTION REFERENCE",
+      "use": "Indicator trajectory, tab state choreography, icon animation ideas",
+      "url": "https://github.com/exyte/AnimatedTabBar"
+    },
+    {
+      "repo": "greensock/gsap-skills",
+      "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "role": "Official GSAP Agent Skills",
+      "license": "MIT",
+      "status": "PRODUCTION REFERENCE",
+      "use": "Timelines, FLIP, MorphSVG, DrawSVG, MotionPath, CustomEase, performance rules",
+      "url": "https://github.com/greensock/gsap-skills"
+    },
+    {
+      "repo": "greensock/GSAP",
+      "commit": "13e2b790546426a1a2e0e9b409f3f8dc6d6611f2",
+      "role": "GSAP runtime repository",
+      "license": "Not asserted by this pack; consult current official terms",
+      "status": "RUNTIME REFERENCE",
+      "use": "Web animation runtime; this pack does not vendor it",
+      "url": "https://github.com/greensock/GSAP"
+    },
+    {
+      "repo": "nolangz/pixel2motion",
+      "commit": "e9faedb28930df0da2acf17da00c80730a78cfe8",
+      "role": "AI logo animation skill",
+      "license": "MIT",
+      "status": "PRODUCTION REFERENCE",
+      "use": "Raster-to-vector fitting, semantic SVG, motion spec, frame capture, final-frame contract",
+      "url": "https://github.com/nolangz/pixel2motion"
+    },
+    {
+      "repo": "ahmeddoghri/VectorMorph",
+      "commit": "b027616297a43df22da1dc913aa64632a7a0cc8e",
+      "role": "Deterministic SVG path morphing",
+      "license": "MIT",
+      "status": "PRODUCTION/TOOL REFERENCE",
+      "use": "Arc-length resampling, path alignment, deterministic morph export",
+      "url": "https://github.com/ahmeddoghri/VectorMorph"
+    },
+    {
+      "repo": "airbnb/lottie-ios",
+      "commit": "2c8608c6b5d6e3fc62168e321fe0a7c89aaa8693",
+      "role": "Lottie Apple runtime",
+      "license": "Apache-2.0",
+      "status": "PRODUCTION RUNTIME",
+      "use": "Playback-oriented vector animation, segments, runtime playback control",
+      "url": "https://github.com/airbnb/lottie-ios"
+    },
+    {
+      "repo": "rive-app/rive-ios",
+      "commit": "fa59ebc1e7df132f6d898b6f00f94e08cbcdf561",
+      "role": "Rive Apple runtime",
+      "license": "MIT",
+      "status": "PRODUCTION RUNTIME",
+      "use": "Interactive animation, state machines, inputs/events, SwiftUI/UIKit delivery",
+      "url": "https://github.com/rive-app/rive-ios"
+    },
+    {
+      "repo": "clayharmon/webgl-liquid-glass",
+      "commit": "a0bbc4766f3d7b65ed46765811ddd68d669f3a03",
+      "role": "Web Liquid Glass navbar with WebGL + spring physics",
+      "license": "MIT",
+      "status": "EXPERIMENTAL/PROTOTYPE REFERENCE",
+      "use": "Specular highlights, chromatic edge, spring pill, drag-to-switch, momentum deformation",
+      "url": "https://github.com/clayharmon/webgl-liquid-glass"
+    },
+    {
+      "repo": "wiiiimm/glass-gl",
+      "commit": "4109cc4d582c789443ba6cf5d91513d99c902424",
+      "role": "WebGL physical-glass experiment/engine",
+      "license": "AGPL-3.0",
+      "status": "RESEARCH ONLY / DO NOT BUNDLE INTO CLOSED PRODUCT WITHOUT LICENSE REVIEW",
+      "use": "Study refraction, magnification, frost, dispersion, rim light; concepts only by default",
+      "url": "https://github.com/wiiiimm/glass-gl"
+    },
+    {
+      "repo": "pointfreeco/swift-snapshot-testing",
+      "commit": "28e5de025e3fd98991791bfbf83023ab3708da03",
+      "role": "Swift snapshot regression framework",
+      "license": "MIT",
+      "status": "PRODUCTION QA",
+      "use": "Deterministic UI snapshot baselines and image/trait comparisons",
+      "url": "https://github.com/pointfreeco/swift-snapshot-testing"
+    },
+    {
+      "repo": "cashapp/AccessibilitySnapshot",
+      "commit": "7a1d34aea8966c10b5002e17df954a171d6c3149",
+      "role": "iOS accessibility snapshot testing",
+      "license": "Apache-2.0",
+      "status": "PRODUCTION QA",
+      "use": "Accessibility hierarchy/image regression for UIKit/SwiftUI",
+      "url": "https://github.com/cashapp/AccessibilitySnapshot"
+    },
+    {
+      "repo": "vercel-labs/skills",
+      "commit": "7407f3893ad4dceab546ac002c3ef806e4000c73",
+      "role": "Open Agent Skills CLI/ecosystem",
+      "license": "MIT",
+      "status": "PACKAGING REFERENCE",
+      "use": "Portable skill packaging/install conventions",
+      "url": "https://github.com/vercel-labs/skills"
+    }
+  ]
+}
